@@ -1,0 +1,92 @@
+.notes-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 5rem 3rem;
+}
+
+.card-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: #ccc;
+  padding: 1rem;
+  font-style: "Helvetica Neue", sans-serif;
+  border-radius: 5px;
+}
+
+.card-body p {
+  margin-top: 0;
+}
+
+h5 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h5::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #aaa;
+}
+
+.btn{
+  padding: 0.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn:hover{
+  opacity: 0.8;
+}
+
+.btn-delete{
+  margin-top: 1rem;
+  background-color: rgb(214, 36, 36);
+}
+
+.btn-delete:hover {
+  box-shadow: 0 0 10px rgb(214, 36, 36);
+}
+
+.btn-edit{
+  background-color: #969;
+}
+
+.btn-edit:hover {
+  box-shadow: 0 0 10px #969;
+}
+
+.edit-icon{
+  color: #3e2b44;
+}
+
+.time{
+  opacity: 0.6;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track{
+  background: #3e2b44;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #969;
+  border: .25rem solid #3e2b44;
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: hsl(310 80% 30% / 1);
+}

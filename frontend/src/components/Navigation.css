@@ -1,0 +1,82 @@
+body {
+  overflow-x: hidden;
+}
+
+.navbar {
+  background: #3e2b44;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navbar-container {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link {
+  color: #ddd;
+  text-decoration: none;
+  font-weight: 700;
+  margin-inline-end: 0.75rem;
+}
+
+.memo-icon {
+  color: #ddd;
+  margin: 0 0.5rem;
+}
+
+.navbar-brand {
+  margin: 1rem 2rem;
+  font-weight: 900;
+}
+
+.navbar-toggler {
+  display: none;
+  color: #ddd;
+}
+
+.navbar-ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem;
+}
+
+.navbar-brand:hover,
+.navbar-item:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 35em) {
+  .navbar-ul {
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+
+    flex-direction: column;
+    padding: min(20vh, 10rem) 2em;
+    margin: 0;
+
+    background: #3e2b44;
+    transform: translateX(100%);
+  }
+
+  .navbar-ul[data-visible="true"] {
+    transform: translateX(0%);
+    transition: transform 0.5s ease-out;
+  }
+
+  .navbar-toggler {
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    aspect-ratio: 1;
+    top: 1rem;
+    right: 1rem;
+  }
+}
